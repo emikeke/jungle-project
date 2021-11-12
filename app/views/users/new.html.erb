@@ -1,0 +1,15 @@
+<% provide(:title, "Signup") %>
+<h1>Registration</h1>
+
+<div class="container">
+  <div class="span 6 offset 3">
+    <%= form_for :user, url: "/users" do |form| %>
+      <p>First name: <%= form.text_field :first_name %></p>
+      <p>Last name: <%= form.text_field :last_name %></p>
+      <p>Email: <%= form.text_field :email %></p>
+      <p>Password: <%= form.password_field :password %></p>
+      <p>Password confirmation: <%= form.password_field :password_confirmation %></p>
+    <%= form.submit "Create my account", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
